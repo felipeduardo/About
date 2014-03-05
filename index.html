@@ -25,7 +25,7 @@
         <p>Brasileiro, <span id="age">28</span> anos, solteiro, sem filhos, não fumante.</p>
 
         <p><span class="locality">Londrina</span>, <span class="region">Paraná</span> <span class="country-name">Brasil</span></p>
-        <a class="email" href="mailto:felipeduardo@gmail.com">felipeduardo@gmail.com</a>
+        <a class="email" href="mailto:felipeduardo@gmail.com">felipeduardo@gmail.com</a><br/>
         <span class="tel"><a href="tel:+554384560256">+55 43 8456-0256</a></span>
 
     </header>
@@ -45,8 +45,8 @@
             </ul>
         </section>
 
-        <!-- <section>
-            <h2>Conhecimento Tecnológico</h2>
+        <section>
+            <h2>Conhecimento Técnico</h2>
             <h3>Avançado</h3>
             <ul>
                 <li>Programação Orientada a Objetos</li>
@@ -56,13 +56,13 @@
                 <li>XHTML / HTML / Web Standards / CSS</li>
                 <li>HTML5 / CSS3</li>
                 <li>Media Queries</li>
-                <li>Rich snippets (Microdados, Microformatos e RDFa)</li>
+                <li>Web semântica (Microdados, Microformatos e RDFa)</li>
                 <li>JavaScript</li>
-                <li>HTML5 / CSS3</li>
                 <li>jQuery / jQuery UI</li>
                 <li>MySQL / SQL Server</li>
                 <li>Git e SVN (Controle de Versão)</li>
-                <li>Recorte e confecção de layout front-end</li>
+                <li>Recorte e confecção de layout com Photoshop</li>
+                <li>Acessibilidade web</li>
             </ul>
 
             <h3>Intermediário</h3>
@@ -70,11 +70,11 @@
                 <li>Análise Essencial e Estruturada</li>
                 <li>UML</li>
                 <li>Design Patterns</li>
-                <li>Integração e desenvolvimento Web Services</li>
+                <li>Integração e desenvolvimento de Web Services</li>
                 <li>RESTful</li>
                 <li>Processo de desenvolvimento com ferramentas de Scrum</li>
                 <li>Gerenciamento de Projetos com DotProject, Collabtive, Redmine e ClockingIT</li>
-                <li>Conceitos de Usabilidade, Experiência do Usuário e Acessibilidade</li>
+                <li>Conceitos de Usabilidade e Experiência do Usuário</li>
                 <li>Google Analitycs</li>
                 <li>SEO</li>
                 <li>Edição de Imagens e Vetores (Photoshop, Illustrator, Corel Draw)</li>
@@ -89,7 +89,7 @@
                 <li>Postgre SQL</li>
                 <li>Procedural Language</li>
             </ul>
-        </section> -->
+        </section>
 
         <section>
             <h2>Formação</h2>
@@ -102,6 +102,7 @@
         <section>
             <h2>Cursos e Workshops</h2>
             <ul>
+                <li>Code Lab de Polymer (Web Components) com Sam Carecho (2 horas) - Web.Br 2013</li>
                 <li>Create custom applications on Plone with Plomino com Eric Berhault (8 horas) - Plone Conference (2013)</li>
                 <li>Time to learn JavaScript com Rok Garbas (8 horas) - Plone Conference (2013)</li>
                 <li>Sencha Touch 2 App Nativas com Sencha SDK (16 horas) - School of Net (2012)</li>
@@ -121,7 +122,23 @@
             <h2>Experiência Profissional</h2>
             <ul>
                 <li>
-                    <h3>EliteSoft Informática (<a href="http://www.elitesoft.com.br/" rel="nofollow">www.elitesoft.com.br</a>), Londrina, Paraná. (Fevereiro, 2012 - atualmente)</h3>
+                    <h3>DESERTO Digital (<a href="http://www.desertodigital.com.br/" rel="nofollow">www.elitesoft.com.br</a>), Londrina, Paraná. (Dezembro, 2012 - atualmente)</h3>
+                    <ul>
+                        <li>Desenvolvimento Front-end e de acessibilidade com Plone para portais do Governo Federal</li>
+                        <li>Desenvolvimento Front-end no Projeto do Portal Padão em Plone do Governo Federal</li>
+                        <li>Desenvolvimento Front-end com foco em acessibilidade e mobile (responsivo)</li>
+                        <li>Construção de sites e templates com CMS Drupal</li>
+                        <li>Automação de tarefas com GruntJS</li>
+                        <li>Manutenção em sistema web com Zend Framework</li>
+                        <li>Github e SVN para controle de versões de software</li>
+                        <li>Palestrante na conferencia mundial de Plone em Brasilia</li>
+                        <li>Instrutor de Plone em curso basico no IFPR Londrina</li>
+                        <li>Instrutor sobre melhores praticas front-end e mobile para equipe da DESERTO Digital</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h3>EliteSoft Informática (<a href="http://www.elitesoft.com.br/" rel="nofollow">www.elitesoft.com.br</a>), Londrina, Paraná. (Fevereiro, 2012 - Dezembro, 2012)</h3>
                     <ul>
                         <li>Desenvolvimento de aplicação usando Drupal como framework de Desenvolvimento</li>
                         <li>Desenvolvimento de Aplicação Mobile com Sencha Touch 1.1 e Touch Charts 1</li>
@@ -204,33 +221,30 @@
 </div>
 
 <script type="text/javascript">
-var calcAge = {
-        init: function(){
-            var birthday = '05/06/1985', day, month, year, now, age;
+    var calcAge = function(){
+        var birthday = '05/06/1985', day, month, year, now, age, abirthday;
 
-            databd = birthday.split('/')
+        abirthday = birthday.split('/')
 
-            day = databd[0]
-            month = databd[1]
-            year = databd[2]
+        day = abirthday[0]
+        month = abirthday[1]
+        year = abirthday[2]
 
-            now = new Date()
+        now = new Date()
 
-            age = ( parseInt( now.getFullYear()) - year -1)
+        age = ( parseInt( now.getFullYear()) - year -1)
 
-            if (now.getMonth() + 1 - month < 0)
-                return age
+        if (now.getMonth() + 1 - month < 0)
+            return age
 
-            if (now.getMonth() + 1 - month > 0)
-                return age + 1
+        if (now.getMonth() + 1 - month > 0)
+            return age + 1
 
-            if (now.getUTCDate() - day >= 0)
-                return age + 1
-
-            document.getElementById('age').innerHTML = age;
-        }
+        if (now.getUTCDate() - day >= 0)
+            return age + 1
     }
 
+    document.getElementById('age').innerHTML = calcAge();
 </script>
 
 </body>
